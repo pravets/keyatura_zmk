@@ -1,6 +1,19 @@
-if SHIELD_KEYATURA
+if SHIELD_KEYATURA_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "Keyatura"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+endif
+
+if SHIELD_KEYATURA_DONGLE || SHIELD_KEYATURA_MOUSE
+
+config ZMK_SPLIT
+    default y
 
 endif

@@ -14,4 +14,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: keyatura
+    shield: keyatura_dongle
+  - board: nice_nano_v2
+    shield: keyatura_mouse

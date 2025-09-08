@@ -1,0 +1,18 @@
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include "keyatura.dtsi"
+#include "keyatura_esb_addr.dtsi"
+
+&mouse_listener {
+    status = "okay";
+
+    scroll-scaler {
+        layers = <1>;
+        input-processors = <&zip_xy_scaler 1 2 &zip_xy_swap_mapper &zip_xy_to_scroll_mapper>;
+    };
+
+    sniper {
+        layers = <1>;
+        input-processors = <&zip_xy_scaler 1 2>;
+    };
+};

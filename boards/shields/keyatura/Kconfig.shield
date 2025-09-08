@@ -1,2 +1,5 @@
-config SHIELD_KEYATURA
-    def_bool $(shields_list_contains,keyatura)
+config SHIELD_KEYATURA_DONGLE
+    def_bool $(shields_list_contains,keyatura_dongle)
+
+config SHIELD_KEYATURA_MOUSE
+    def_bool $(shields_list_contains,keyatura_mouse)
