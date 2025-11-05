@@ -2,13 +2,28 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include "keyatura.dtsi"
 #include "keyatura_esb_addr.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+    input_processors {
+        zip_xy_swap_to_scroll_mapper: zip_xy_swap_to_scroll_mapper {
+            compatible = "zmk,input-processor-code-mapper";
+            #input-processor-cells = <0>;
+            type = <INPUT_EV_REL>;
+            map
+                = <INPUT_REL_Y INPUT_REL_HWHEEL>
+                , <INPUT_REL_X INPUT_REL_WHEEL>
+                ;
+        };
+    };
+};
 
 &mouse_listener {
     status = "okay";
 
     scroll-scaler {
         layers = <1>;
-        input-processors = <&zip_xy_scaler 1 2 &zip_xy_swap_mapper &zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_xy_scaler 1 2 &zip_xy_swap_to_scroll_mapper>;
     };
 
     sniper {

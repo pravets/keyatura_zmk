@@ -91,17 +91,17 @@
         ec_s: mouse_scroll {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
-            trigger-period-ms = <12>; // slow down for OTA, default is 3ms
+            trigger-period-ms = <3>;
             x-input-code = <INPUT_REL_HWHEEL>;
             y-input-code = <INPUT_REL_WHEEL>;
-            time-to-max-speed-ms = <177>;
+            time-to-max-speed-ms = <100>;
             acceleration-exponent = <0>;
         };
 
         rot_enc: sensor_rotate {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&ec_s MOVE_Y(240)>, <&ec_s MOVE_Y(-240)>;
+            bindings = <&ec_s MOVE_Y(500)>, <&ec_s MOVE_Y(-500)>;
             tap-ms = <65>;
         };
     };

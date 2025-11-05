@@ -9,7 +9,7 @@ set -euxo pipefail
 
 build_mouse () {
     local shield=mouse
-    rm -rf $CURRENT_DIR/build/$side
+    rm -rf $CURRENT_DIR/build/$shield
     export NRF_MODULE_DIRS="$HOME/zmk-esb/zmk-feature-split-esb/nrf"
     export NRFXLIB_MODULE_DIRS="$HOME/zmk-esb/zmk-feature-split-esb/nrfxlib"
     export ZMK_ESB_MODULE_DIRS="$HOME/zmk-esb/zmk-feature-split-esb"
@@ -60,8 +60,8 @@ mkdir -p $CURRENT_DIR/build
 
 pushd $ZMK_APP_DIR
 
-build_dongle
-# build_mouse
+# build_dongle
+build_mouse
 
 deactivate
 
