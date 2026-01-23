@@ -270,9 +270,9 @@
 
         adj {
             bindings = <
-  &kp F1        &kp F2        &kp F3         &kp F4         &kp RU_CYRILLIC_IO                    &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
+  &kp F1        &kp F2        &kp F3         &kp F4         &kp RU_CYRILLIC_IO                    &check_conn   &bt BT_SEL 0         &bt BT_SEL 1       &bt BT_SEL 2        &bt BT_CLR
   &hml LGUI F5  &hml LALT F6  &hml LCTRL F7  &hml LSHFT F8  &bootloader                           &check_bat    &hmr RSHFT C_VOL_DN  &hmr RCTRL C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
-  &kp F9        &kp F10        &kp F11       &kp F12        &none                                 &check_conn   &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
+  &kp F9        &kp F10        &kp F11       &kp F12        &none                                 &none         &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
                                              &trans         &trans              &trans    &trans  &trans        &trans
             >;
         };
