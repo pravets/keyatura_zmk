@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ggrocer
       url-base: https://github.com/greengrocer98
+    - name: crazy-keyboards
+      url-base: https://github.com/crazy-keyboards
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,5 +14,8 @@ manifest:
     - name: zmk-vfx-indicator
       remote: ggrocer
       revision: main
+    - name: zmk-locales
+      remote: crazy-keyboards
+      revision: develop
   self:
     path: config
