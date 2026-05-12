@@ -1,11 +1,9 @@
 #include <locale/keys_ru.h>
+#include <behaviors/vfx_indicator.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
-
-#include <behaviors/vfx_indicator.dtsi>
 
 &mt {
     quick-tap-ms = <200>;
